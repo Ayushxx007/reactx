@@ -11,41 +11,126 @@ import ReactDOM from "react-dom/client";
 
 
 
+const RestaurantCard=(props)=>{
+    console.log(props);
+    return (
+        <div className="res-card" style={{backgroundColor:"rgb(50,180,100)"}}>
+            <img className="res-logo" alt="res-logo" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/2b4f62d606d1b2bfba9ba9e5386fabb7"></img>
 
-// same thing by react
 
-const heading =React.createElement("div",{id:"parent"},"mahika");  // CREATING AN REACT ELEMENT WITH ID = PARENT 
-
-const root =ReactDOM.createRoot(document.getElementById("root"));  //  CREATING A ROOT ELEMENT WHERE EVERYTHING IS RENDERERD
-
-root.render(heading);   // 
-
-// this is very heptic so JSX Comes in Picture
-// HTML like syntax in js 
-
-const Mahika=()=><p>Mhai ccc dcccka</p>;
-
-const reactElement=<h1>mahak</h1> ;    //
-root.render(reactElement); //
-let n=1000;
-
-const ReactComponent=()=>(
-
-    <div id="container">
-
-       
-
-      <Mahika/>
-
-     
+          <h3>{props.name}</h3>
+          <h4>{props.foods}</h4>
+          <h4> 3.5 stars </h4>
+          <h4>38mins</h4>
 
 
 
-<h1>mahika singh</h1>
-    </div>);
 
-   
 
-root.render(<ReactComponent/>); //
+
+
+
+
+
+        </div>
+
+
+
+
+
+    );
+
+}
+
+
+
+const Body=()=>{
+    return(
+        <div>
+        <div className="search">search</div>
+        <div className="res-container">
+            <RestaurantCard name="meghna foods" foods="Biryani, cake, salad"/>
+            <RestaurantCard name="burger king" foods="cake"/> 
+           
+            
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+    );
+
+}
+
+
+
+const Header=()=>{
+   return  (
+    <div className="header">
+        <div className="logo-container">
+            <img className="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtHqGBsBCn9uUEAOBuGuZuxFkaeoAgZhGVXg&s"></img>
+        </div>
+        <div className="nav-items">
+            <ul>
+                <li>Home</li>
+                <li>About us</li>
+                <li>Contact us</li>
+                <li>cart</li>
+                <li>Our Story</li>
+ </ul>
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+    );
+
+
+
+}
+
+
+
+const AppLayout=()=>{
+
+    return(
+        <div className="app">
+
+            <Header/>
+            <Body/>
+
+
+
+
+
+
+
+
+        </div>
+
+
+    );
+
+}
+
+const root =ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(<AppLayout/>);
+
+
+
+
 
 
