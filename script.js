@@ -14,9 +14,38 @@ import ReactDOM from "react-dom/client";
 
 // same thing by react
 
+const heading =React.createElement("div",{id:"parent"},"mahika");  // CREATING AN REACT ELEMENT WITH ID = PARENT 
 
-const heading=React.createElement("div",{id:"parent"},React.createElement("div",{id:"child"},React.createElement("h1",{},[React.createElement("p",{},"nimbu"),React.createElement("p",{},"simba")]) ) );     // Creating react element
+const root =ReactDOM.createRoot(document.getElementById("root"));  //  CREATING A ROOT ELEMENT WHERE EVERYTHING IS RENDERERD
 
- const root=ReactDOM.createRoot(document.getElementById("root"));   // creating react root element 
+root.render(heading);   // 
 
- root.render(heading);          // rendering stuff into react root element
+// this is very heptic so JSX Comes in Picture
+// HTML like syntax in js 
+
+const Mahika=()=><p>Mhai ccc dcccka</p>;
+
+const reactElement=<h1>mahak</h1> ;    //
+root.render(reactElement); //
+let n=1000;
+
+const ReactComponent=()=>(
+
+    <div id="container">
+
+       
+
+      <Mahika/>
+
+     
+
+
+
+<h1>mahika singh</h1>
+    </div>);
+
+   
+
+root.render(<ReactComponent/>); //
+
+
